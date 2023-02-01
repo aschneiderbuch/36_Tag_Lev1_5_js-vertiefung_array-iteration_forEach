@@ -46,25 +46,44 @@ let checkNumber = [
     26,
     15,
     78
-  ];
-  
+];
 
-  function durch3Teilbar(){
 
-    checkNumber.map((element) =>{
+function durch3Teilbar() {
+
+    checkNumber.map((element) => {
         const body = document.querySelector("body");
 
-        if(element %3 == 0){
+        if (element % 3 == 0) {
             element = ` ${element + 100} durch 3 teilbar `;
         }
-        else {element = element}
-body.innerHTML += ` ${element} <br>`;
-// body.innerHTML = `</br> ${checkNumber}`;
-console.log(element);
+        else { element = element }
+        body.innerHTML += ` ${element} <br>`;
+        // body.innerHTML = `</br> ${checkNumber}`;
+        console.log(element);
     })
 
 
     console.table(checkNumber);
-  };
+};
 
-  durch3Teilbar();
+durch3Teilbar();
+
+// als arrow function
+const durch3 = () => {
+    checkNumber.map((element) => {
+        const body = document.querySelector("body");
+
+        if (element % 3 == 0) {
+            element = ` ${element + 100} durch 3 teilbar `;
+        }
+        else { element = element }
+        body.innerHTML += ` ${element} <br>`;
+        // body.innerHTML = `</br> ${checkNumber}`;
+        console.log(element);
+    })
+}
+
+durch3();
+durch3();
+durch3();
